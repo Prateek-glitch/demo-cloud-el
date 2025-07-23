@@ -10,7 +10,7 @@
 
 *"Because basic notes are boring. You deserve better."* ✨
 
-<img src="https://media.giphy.com/media/xThtacuKdrY5n4VVGM/giphy.gif" width="300" alt="Note-taking gif" />
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejUwajY1YXZndThqbjJpNWlyaTg4MjBmemUyMHl3NzRiaGt2dXUzZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/4KEMBV2Mj1HX3J64Az/giphy.gif" width="300" alt="Note-taking gif" />
 
 </div>
 
