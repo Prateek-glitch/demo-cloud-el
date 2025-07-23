@@ -1,0 +1,126 @@
+/* src/index.css */
+@import 'quill/dist/quill.snow.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- NEW: Custom styles for React Quill in dark mode --- */
+
+/* Base Quill editor background and text color */
+.quill-custom-toolbar-dark .ql-container {
+    background-color: #1f2937; /* Matches gray-800 from Tailwind */
+    border: none !important; /* Remove default border */
+    border-bottom-left-radius: 0.5rem; /* Rounded corners for editor body */
+    border-bottom-right-radius: 0.5rem;
+}
+
+/* Quill text color */
+.quill-custom-toolbar-dark .ql-editor {
+    color: #f3f4f6; /* Matches gray-100 for dark mode text */
+    min-height: 120px; /* Ensure sufficient height for typing */
+}
+
+/* Quill toolbar background and border */
+.quill-custom-toolbar-dark .ql-toolbar {
+    background-color: #374151; /* Matches gray-700 from Tailwind */
+    border-top-left-radius: 0.5rem; /* Rounded corners for toolbar */
+    border-top-right-radius: 0.5rem;
+    border: none !important; /* Remove default border */
+    border-bottom: 1px solid #4b5563 !important; /* Subtle separator */
+}
+
+/* Toolbar buttons (icons) and dropdowns */
+.quill-custom-toolbar-dark .ql-snow .ql-stroke {
+    stroke: #d1d5db; /* Light gray for icons */
+}
+.quill-custom-toolbar-dark .ql-snow .ql-fill {
+    fill: #d1d5db; /* Light gray for filled icons */
+}
+
+/* Active/selected states for toolbar buttons */
+.quill-custom-toolbar-dark .ql-snow .ql-picker-label.ql-active,
+.quill-custom-toolbar-dark .ql-snow .ql-picker-item.ql-selected,
+.quill-custom-toolbar-dark .ql-snow .ql-active .ql-stroke,
+.quill-custom-toolbar-dark .ql-snow .ql-active .ql-fill {
+    color: #3b82f6; /* Blue-500 for active text/icons */
+    stroke: #3b82f6;
+    fill: #3b82f6;
+}
+
+/* Hover states for toolbar buttons */
+.quill-custom-toolbar-dark .ql-snow .ql-toolbar button:hover .ql-stroke,
+.quill-custom-toolbar-dark .ql-snow .ql-toolbar button:hover .ql-fill,
+.quill-custom-toolbar-dark .ql-snow .ql-toolbar button.ql-active:hover .ql-stroke,
+.quill-custom-toolbar-dark .ql-snow .ql-toolbar button.ql-active:hover .ql-fill {
+    stroke: #60a5fa; /* Blue-400 for hover */
+    fill: #60a5fa;
+    color: #60a5fa;
+}
+
+
+/* Dropdown background for font/size/color pickers */
+.quill-custom-toolbar-dark .ql-snow .ql-picker.ql-expanded .ql-picker-options {
+    background-color: #1f2937; /* Dark background for dropdown options */
+    border: 1px solid #4b5563; /* Subtle border */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown item hover/selected */
+.quill-custom-toolbar-dark .ql-snow .ql-picker-item:hover {
+    background-color: #4b5563; /* Darker gray on hover */
+    color: #f3f4f6; /* Ensure text color is readable */
+}
+
+/* Placeholder text color */
+.quill-custom-toolbar-dark .ql-editor.ql-blank::before {
+    color: #9ca3af; /* Matches gray-400 for placeholder */
+}
+
+/* Specific styling for the displayed content in NoteCard */
+.quill-content-display h1,
+.quill-content-display h2 {
+  font-weight: 600; /* semi-bold */
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+.quill-content-display h1 {
+  font-size: 1.25em; /* text-xl */
+}
+
+.quill-content-display h2 {
+  font-size: 1.125em; /* text-lg */
+}
+
+.quill-content-display ul,
+.quill-content-display ol {
+  padding-left: 1.5em; /* Indent lists */
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.quill-content-display strong {
+  font-weight: bold;
+}
+
+.quill-content-display em {
+  font-style: italic;
+}
+
+.quill-content-display u {
+  text-decoration: underline;
+}
+
+/* Ensure line-clamp behaves well with rich text */
+.quill-content-display {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
